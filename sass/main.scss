@@ -1,0 +1,510 @@
+$home-background: hsl(217, 28%, 15%);
+$main-background: hsl(218, 28%, 13%);
+$testimonials-background: hsl(219, 30%, 18%);
+$footer-background: hsl(216, 53%, 9%);
+
+$first-gradient-color: hsl(176, 68%, 64%);
+$second-gradient-color: hsl(198, 60%, 50%);
+
+$neutral: hsl(0, 0%, 100%);
+
+/* ### Headings, Call-to-actions, Header Navigation
+font-family: 'Raleway', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: $main-background;
+  text-align: center;
+  color: $neutral;
+  a {
+    text-decoration: none;
+    color: $neutral;
+    &:hover {
+      text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+section {
+  padding: 5% 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5% 5% 0;
+  background-color: $home-background;
+  &__nav {
+    display: flex;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    width: 20%;
+    min-width: 300px;
+    justify-content: space-between;
+    list-style-type: none;
+    font-family: "Raleway", sans-serif;
+  }
+}
+
+.home {
+  padding: 5% 25% 10%;
+  background-color: $home-background;
+  background-image: url(images/bg-curvy-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% auto;
+  &__illustration {
+    padding-bottom: 5%;
+  }
+  &__heading {
+    width: 80%;
+    font-family: "Raleway", sans-serif;
+    font-size: 2.3rem;
+    line-height: 3.5rem;
+    margin: 0 auto;
+    padding-bottom: 3%;
+  }
+  &__description {
+    width: 60%;
+    padding-bottom: 3%;
+    font-size: 1.2rem;
+    margin: 0 auto;
+  }
+  &__btn {
+    padding: 15px 80px;
+    border-radius: 50px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    background: linear-gradient(
+      to right,
+      $first-gradient-color,
+      $second-gradient-color
+    );
+    &:hover {
+      color: unset;
+      text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+.features {
+  display: grid;
+  padding: 0 0 5%;
+  grid-template-columns: 400px 400px;
+  grid-template-rows: 250px 250px;
+  grid-gap: 15% 10%;
+  justify-content: center;
+  grid-template-areas:
+    "box1 box2"
+    "box3 box4";
+  &__card {
+    margin: 0 auto;
+    &__img {
+      padding-bottom: 5%;
+    }
+    &__heading {
+      padding-bottom: 5%;
+    }
+    &.b1 {
+      grid-area: box1;
+    }
+    &.b2 {
+      grid-area: box2;
+    }
+    &.b3 {
+      grid-area: box3;
+    }
+    &.b4 {
+      grid-area: box4;
+    }
+  }
+}
+
+.team {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5%;
+  &__img {
+    margin: 0 auto;
+  }
+  &__text-bloc {
+    text-align: left;
+    padding-top: 12%;
+    h1 {
+      font-size: 2.3rem;
+      padding-bottom: 3%;
+      width: 50%;
+    }
+    p {
+      padding-bottom: 3%;
+      width: 65%;
+    }
+    a {
+      color: $first-gradient-color;
+      border-bottom: solid 1px $first-gradient-color;
+      padding-bottom: 5px;
+      &:hover {
+        border-color: $second-gradient-color;
+        color: $second-gradient-color;
+        text-shadow: unset;
+      }
+    }
+  }
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: 350px 350px 350px;
+  grid-template-rows: 220px;
+  grid-gap: 15% 5%;
+  padding: 5%;
+  justify-content: center;
+}
+
+.card {
+  display: grid;
+  background-color: $testimonials-background;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 20px;
+  grid-template-columns: 50px auto;
+  grid-template-rows: 130px 25px 25px;
+  grid-template-areas:
+    "c1 c1"
+    "c2 c3"
+    "c2 c4";
+  &__marks {
+    position: relative;
+    bottom: 235px;
+    right: 30px;
+    z-index: -1;
+  }
+  &__comment {
+    text-align: left;
+    grid-area: c1;
+    align-self: center;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+  }
+  &__picture {
+    width: 35px;
+    border-radius: 100%;
+    grid-area: c2;
+    justify-self: center;
+    align-self: center;
+  }
+  &__name {
+    grid-area: c3;
+    font-size: 0.9rem;
+    text-align: left;
+    align-self: end;
+  }
+  &__job {
+    grid-area: c4;
+    font-size: 0.7rem;
+    text-align: left;
+  }
+}
+
+.sign-in {
+  position: relative;
+  top: 150px;
+  background-color: $home-background;
+  width: 55%;
+  margin: 0 auto;
+  padding: 3% 0;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  &__heading {
+    font-size: 2.3rem;
+    padding-bottom: 3%;
+  }
+  &__text {
+    padding-bottom: 3%;
+    margin: 0 auto;
+    width: 65%;
+  }
+  &__input {
+    width: 45%;
+    padding: 15px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-right: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    &:focus {
+      outline: none;
+    }
+  }
+  &__btn {
+    padding: 15px;
+    border-radius: 50px;
+    display: inline-block;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(
+      to right,
+      $first-gradient-color,
+      $second-gradient-color
+    );
+    &:hover {
+      color: unset;
+      text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+.footer {
+  background-color: $footer-background;
+  padding: 15% 10% 5%;
+  text-align: left;
+}
+
+.footer-content {
+  margin: 25px 0 0;
+  display: grid;
+  grid-template-columns: 35% 20% 15% 15% 15%;
+  grid-template-rows: 1fr;
+  grid-template-areas: "text contact list1 list2 networks";
+  &__text {
+    grid-area: text;
+    i {
+      padding-right: 20px;
+      vertical-align: top;
+    }
+    p {
+      display: inline-block;
+      max-width: 330px;
+    }
+  }
+  &__contact {
+    grid-area: contact;
+    p {
+      padding-bottom: 5%;
+    }
+    i {
+      padding-right: 20px;
+    }
+  }
+  &__list1 {
+    grid-area: list1;
+    list-style-type: none;
+    li {
+      padding-bottom: 5%;
+    }
+  }
+  &__list2 {
+    grid-area: list2;
+    list-style-type: none;
+    li {
+      padding-bottom: 5%;
+    }
+  }
+  &__networks {
+    grid-area: networks;
+    i {
+      text-align: center;
+      width: 16px;
+      padding: 8px;
+      margin-right: 8px;
+      border: solid 1px $neutral;
+      border-radius: 100%;
+    }
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 849.98px) {
+  .header {
+    &__logo {
+      width: 25%;
+    }
+    &__nav {
+      width: 50%;
+      min-width: unset;
+      padding-right: 0;
+      font-size: 0.8rem;
+    }
+  }
+
+  .home {
+    padding: 5% 5% 30%;
+    background-image: url(images/bg-curvy-mobile.svg),
+      linear-gradient(
+        to top,
+        $main-background 0%,
+        $main-background 50%,
+        $home-background 50%,
+        $home-background 100%
+      );
+    background-position-y: 37.5%;
+    &__illustration {
+      width: 90%;
+    }
+    &__heading {
+      font-size: 1.5rem;
+      width: 100%;
+      line-height: 2.5rem;
+      padding-bottom: 5%;
+    }
+    &__description {
+      width: 100%;
+      font-size: 1rem;
+      padding-bottom: 10%;
+    }
+  }
+
+  .features {
+    grid-template-columns: 90%;
+    grid-template-rows: 250px 250px 250px 250px;
+    grid-row-gap: 10%;
+    padding-bottom: 100%;
+    grid-template-areas:
+      "box1"
+      "box2"
+      "box3"
+      "box4";
+    &__card {
+      &__img {
+        padding-bottom: 5%;
+      }
+      &__heading {
+        padding-bottom: 5%;
+      }
+    }
+  }
+
+  .team {
+    display: inline-block;
+    grid-template-columns: 1fr 1fr;
+    padding: 5%;
+    &__img {
+      width: 90%;
+    }
+    &__text-bloc {
+      h1 {
+        font-size: 1.2rem;
+        width: 100%;
+        padding-bottom: 5%;
+      }
+      p {
+        width: 100%;
+        padding-bottom: 5%;
+      }
+      a {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .testimonials {
+    grid-template-columns: 90%;
+    grid-template-rows: 215px 215px 215px;
+    grid-gap: 5%;
+    margin-top: 30%;
+    padding: 3%;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 140px 20px 15px;
+    grid-template-areas:
+      "c1 c1"
+      "c2 c3"
+      "c2 c4";
+    &__marks {
+      width: 30px;
+      bottom: 215px;
+      right: 15px;
+    }
+    &__comment {
+      align-self: flex-start;
+    }
+  }
+
+  .sign-in {
+    top: 160px;
+    width: 90%;
+    padding: 3% 0;
+    &__heading {
+      font-size: 1.2rem;
+      padding: 5% 0 5%;
+    }
+    &__text {
+      padding-bottom: 10%;
+      width: 90%;
+    }
+    &__input {
+      width: 75%;
+      margin-right: 0;
+    }
+    &__btn {
+      margin: 7% 0 7%;
+      width: 75%;
+    }
+  }
+
+  .footer {
+    background-color: $footer-background;
+    padding: 65% 5% 10%;
+    text-align: left;
+  }
+
+  .footer-content {
+    margin: 25px 0 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20vh 25vh 30vh 25vh 5vh;
+    grid-template-areas: "text" " contact " "list1 " "list2 " "networks";
+    &__text {
+      grid-area: text;
+      i {
+        padding-right: 20px;
+        vertical-align: top;
+      }
+      p {
+        display: inline-block;
+        max-width: 80%;
+      }
+    }
+    &__contact {
+      grid-area: contact;
+      p {
+        padding-bottom: 5%;
+      }
+      i {
+        padding-right: 20px;
+      }
+    }
+    &__list1 {
+      grid-area: list1;
+      list-style-type: none;
+      li {
+        padding-bottom: 5%;
+      }
+    }
+    &__list2 {
+      background-color: $footer-background;
+      grid-area: list2;
+      list-style-type: none;
+      li {
+        padding-bottom: 5%;
+      }
+    }
+    &__networks {
+      background-color: $footer-background;
+      grid-area: networks;
+      text-align: center;
+      padding-bottom: 10%;
+      i {
+        text-align: center;
+        margin: 0 4px;
+      }
+    }
+  }
+}
