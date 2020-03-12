@@ -398,10 +398,12 @@ section {
       width: 90%;
     }
     &__text-bloc {
+      padding: 12% 0 0;
       h1 {
         font-size: 1.2rem;
         width: 100%;
         padding-bottom: 5%;
+        min-width: unset;
       }
       p {
         width: 100%;
@@ -410,7 +412,6 @@ section {
       }
       a {
         font-size: 1rem;
-        min-width: unset;
       }
     }
   }

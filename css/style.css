@@ -358,10 +358,14 @@ section {
   .team__img {
     width: 90%;
   }
+  .team__text-bloc {
+    padding: 12% 0 0;
+  }
   .team__text-bloc h1 {
     font-size: 1.2rem;
     width: 100%;
     padding-bottom: 5%;
+    min-width: unset;
   }
   .team__text-bloc p {
     width: 100%;
@@ -370,7 +374,6 @@ section {
   }
   .team__text-bloc a {
     font-size: 1rem;
-    min-width: unset;
   }
 
   .testimonials {
