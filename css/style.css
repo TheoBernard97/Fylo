@@ -366,9 +366,11 @@ section {
   .team__text-bloc p {
     width: 100%;
     padding-bottom: 5%;
+    min-width: unset;
   }
   .team__text-bloc a {
     font-size: 1rem;
+    min-width: unset;
   }
 
   .testimonials {
