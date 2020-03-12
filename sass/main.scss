@@ -144,14 +144,16 @@ section {
   }
   &__text-bloc {
     text-align: left;
-    padding-top: 12%;
+    padding: 12% 5% 0;
     h1 {
       font-size: 2.3rem;
       padding-bottom: 3%;
+      min-width: 425px;
       width: 50%;
     }
     p {
       padding-bottom: 3%;
+      min-width: 425px;
       width: 65%;
     }
     a {
