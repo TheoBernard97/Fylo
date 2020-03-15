@@ -1,3 +1,5 @@
+/* Sass Var */
+
 $home-background: hsl(217, 28%, 15%);
 $main-background: hsl(218, 28%, 13%);
 $testimonials-background: hsl(219, 30%, 18%);
@@ -8,8 +10,7 @@ $second-gradient-color: hsl(198, 60%, 50%);
 
 $neutral: hsl(0, 0%, 100%);
 
-/* ### Headings, Call-to-actions, Header Navigation
-font-family: 'Raleway', sans-serif; */
+/* Global */
 
 * {
   margin: 0;
@@ -25,18 +26,40 @@ body {
   background-color: $main-background;
   text-align: center;
   color: $neutral;
-  a {
-    text-decoration: none;
-    color: $neutral;
-    &:hover {
-      text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
-    }
-  }
 }
+
+/* Sections */
 
 section {
   padding: 5% 0;
 }
+
+/* Custom Elements */
+
+a {
+  text-decoration: none;
+  color: $neutral;
+  &:hover {
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  }
+}
+
+.button {
+  border-radius: 50px;
+  display: inline-block;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(
+    to right,
+    $first-gradient-color,
+    $second-gradient-color
+  );
+  &:hover {
+    color: $neutral;
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  }
+}
+
+/* Main */
 
 .header {
   display: flex;
@@ -81,18 +104,6 @@ section {
   }
   &__btn {
     padding: 15px 80px;
-    border-radius: 50px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    display: inline-block;
-    background: linear-gradient(
-      to right,
-      $first-gradient-color,
-      $second-gradient-color
-    );
-    &:hover {
-      color: unset;
-      text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
-    }
   }
 }
 
@@ -254,18 +265,6 @@ section {
   }
   &__btn {
     padding: 15px;
-    border-radius: 50px;
-    display: inline-block;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(
-      to right,
-      $first-gradient-color,
-      $second-gradient-color
-    );
-    &:hover {
-      color: unset;
-      text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
-    }
   }
 }
 
@@ -456,7 +455,6 @@ section {
 
   .footer-content {
     margin: 10% 0 0;
-    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 15vh 15vh 24vh 18vh 5vh;
     grid-template-areas: "text" " contact " "list1 " "list2 " "networks";
@@ -472,7 +470,6 @@ section {
       }
     }
     &__contact {
-      grid-area: contact;
       p {
         padding-bottom: 5%;
       }
@@ -481,23 +478,18 @@ section {
       }
     }
     &__list1 {
-      grid-area: list1;
       list-style-type: none;
       li {
         padding-bottom: 5%;
       }
     }
     &__list2 {
-      background-color: $footer-background;
-      grid-area: list2;
       list-style-type: none;
       li {
         padding-bottom: 5%;
       }
     }
     &__networks {
-      background-color: $footer-background;
-      grid-area: networks;
       text-align: center;
       padding-bottom: 10%;
       i {
@@ -527,7 +519,7 @@ section {
   }
 
   .home {
-    padding: 5% 5% 30%;
+    padding-bottom: 30%;
     background-image: url(../images/bg-curvy-mobile.svg),
       linear-gradient(
         to top,
@@ -537,9 +529,6 @@ section {
         $home-background 100%
       );
     background-position-y: 37.5%;
-    &__illustration {
-      width: 90%;
-    }
     &__heading {
       font-size: 1.5rem;
       width: 100%;
@@ -547,7 +536,6 @@ section {
       padding-bottom: 5%;
     }
     &__description {
-      width: 100%;
       font-size: 1rem;
       padding-bottom: 10%;
     }
@@ -580,12 +568,6 @@ section {
   }
 
   .team {
-    display: inline-block;
-    grid-template-columns: 1fr 1fr;
-    padding: 5%;
-    &__img {
-      width: 90%;
-    }
     &__text-bloc {
       h1 {
         font-size: 1.2rem;
@@ -599,13 +581,10 @@ section {
   .testimonials {
     grid-template-columns: 90%;
     grid-template-rows: 215px 215px 215px;
-    grid-gap: 5%;
     margin-top: 30%;
-    padding: 3%;
   }
 
   .card {
-    display: grid;
     grid-template-columns: 30% 70%;
     grid-template-rows: 140px 20px 15px;
     grid-template-areas:
@@ -633,7 +612,6 @@ section {
 
   .sign-in {
     top: 160px;
-    width: 90%;
     padding: 3% 0;
     &__heading {
       font-size: 1.2rem;
@@ -644,72 +622,26 @@ section {
       width: 90%;
     }
     &__input {
-      width: 75%;
-      margin-right: 0;
       font-size: 0.8rem;
     }
     &__btn {
-      font-size: 1rem;
       margin: 7% 0 7%;
-      width: 75%;
+      font-size: 1rem;
     }
   }
 
   .footer {
-    background-color: $footer-background;
     padding: 65% 5% 10%;
-    text-align: left;
   }
 
   .footer-content {
-    margin: 25px 0 0;
-    display: grid;
+    margin: 40px 0 0;
     grid-template-columns: 1fr;
-    grid-template-rows: 20vh 25vh 30vh 25vh 5vh;
+    grid-template-rows: 17vh 20vh 30vh 25vh 5vh;
     grid-template-areas: "text" " contact " "list1 " "list2 " "networks";
     &__text {
-      grid-area: text;
-      i {
-        padding-right: 20px;
-        vertical-align: top;
-      }
       p {
-        display: inline-block;
         max-width: 80%;
-      }
-    }
-    &__contact {
-      grid-area: contact;
-      p {
-        padding-bottom: 5%;
-      }
-      i {
-        padding-right: 20px;
-      }
-    }
-    &__list1 {
-      grid-area: list1;
-      list-style-type: none;
-      li {
-        padding-bottom: 5%;
-      }
-    }
-    &__list2 {
-      background-color: $footer-background;
-      grid-area: list2;
-      list-style-type: none;
-      li {
-        padding-bottom: 5%;
-      }
-    }
-    &__networks {
-      background-color: $footer-background;
-      grid-area: networks;
-      text-align: center;
-      padding-bottom: 10%;
-      i {
-        text-align: center;
-        margin: 0 4px;
       }
     }
   }
