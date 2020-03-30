@@ -304,6 +304,30 @@ a:hover {
 }
 
 /* ------------------------------ Responsive ------------------------------ */
+/* 992px ~ 1200px */
+@media (max-width: 1200px) {
+  .home {
+    padding: 5% 10% 10%;
+  }
+
+  .team {
+    margin-top: 5%;
+  }
+  .team__img {
+    max-width: 100%;
+  }
+
+  .testimonials {
+    grid-template-columns: 40% 40%;
+    grid-template-rows: 250px 250px;
+    grid-gap: 10%;
+    margin-top: 5%;
+  }
+
+  .footer {
+    padding-top: 25%;
+  }
+}
 /* Medium devices (tablets, less than 992px)*/
 @media (max-width: 991.98px) {
   body {
